@@ -4,6 +4,9 @@
 #include <cstdlib>
 #include <ctime>
 #include "Particula.h"
+#include "Posicao.h"
+// #include "Celula.h"
+#include "Matriz.h"
 
 using namespace std;
 
@@ -114,30 +117,28 @@ int main(int argc, char* argv[]) {
     //     return 1;
     // }
 
-    Particula p1(1);
-    p1.toString();
-
-
+    // Matr
 
     // Recebendo os parâmetros de entrada
-    int seed = atoi(argv[1]);
-    double space_size = atof(argv[2]);
-    int grid_size = atoi(argv[3]);
+    int seed = 2;//atoi(argv[1]);
+    double espacoQuadrado = 10; //atof(argv[2]);
+    int espacoCelula = 10;//atoi(argv[3]);
     int num_particles = atoi(argv[4]);
     int num_steps = atoi(argv[5]);
 
-    vector<Particle> particles;
-    init_particles(num_particles, space_size, particles, seed);
+    Matriz matriz(espacoQuadrado);
+
+    // init_particles(num_particles, space_size, particles, seed);
 
     // Executar a simulação
     double time_step = 0.01;  // Passo de tempo arbitrário
-    run_simulation(num_particles, num_steps, time_step, space_size, particles);
+    // run_simulation(num_particles, num_steps, time_step, space_size, particles);
 
     // Exibir os resultados
     // Aqui, ajustamos a saída conforme o problema solicita. Exibimos as posições e velocidades das partículas.
-    for (const auto& p : particles) {
-        cout << p.x << " " << p.y << " " << p.velocidade_x << " " << p.velocidade_y << " " << p.massa << endl;
-    }
+    // for (const auto& p : particles) {
+    //     cout << p.x << " " << p.y << " " << p.velocidade_x << " " << p.velocidade_y << " " << p.massa << endl;
+    // }
 
     return 0;
 }
