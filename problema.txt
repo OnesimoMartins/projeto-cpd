@@ -1,0 +1,41 @@
+Consideramos  um  cenário  onde  as  partículas  se  movem  livremente  no  espaço  e  as 
+únicas  forças  às  quais  elas  são  submetidas  são  devidas  à  gravidade  umas  das  outras. 
+Para  simplificar,  assuma um  espaço  2D,  um quadrado  com  lado 1000  (as unidades de 
+medida reais não são relevantes).A magnitude da força entre as partículas A e B é determinada pela fórmula clássica onde mA,mB são as respectivas massas, dA,B é a distância entre elas e G é a constante Naturalmente, a força aplicada a cada partícula é a soma da atracção gravitacional de 
+todas as outras partículas. A força resultante determina a aceleração da partícula a 
+cada instante, que é usada para determinar, a cada passo de tempo, os novos valores 
+da velocidade e posição da partícula:            Usaremos :   Este problema, conhecido como problema n-corpos,  com  complexidade  Θ(n2), é 
+computacionalmente muito desgastante para um grande número de partículas n. Para 
+evitar essa complexidade, para esta tarefa usamos uma aproximação chamada 
+partícula-na-célula  (PIC  -  particle-in-cell).  O  PIC  funciona  discretizando  o  espaço  em 
+uma grade (no  nosso  caso, células  quadradas  2D).  As  partículas  em  cada célula 
+
+gravitacional (6,67408 × 10−11). Isso é ilustrado na figura abaixo.  Naturalmente, a força aplicada a cada partícula é a soma da atracção gravitacional de 
+todas as outras partículas. A força resultante determina a aceleração da partícula a 
+cada instante, que é usada para determinar, a cada passo de tempo, os novos valores 
+da velocidade e posição da partícula:            Usaremos :   Este problema, conhecido como problema n-corpos,  com  complexidade  Θ(n2), é 
+computacionalmente muito desgastante para um grande número de partículas n. Para 
+evitar essa complexidade, para esta tarefa usamos uma aproximação chamada 
+partícula-na-célula  (PIC  -  particle-in-cell).  O  PIC  funciona  discretizando  o  espaço  em 
+uma grade (no  nosso  caso, células  quadradas  2D).  As  partículas  em  cada célula definem o centro de massa da célula M (a soma das massas das n partículas na célula) 
+e as coordenadas computadas como:                            Agora  a  força  sobre  uma  partícula  é  calculada  considerando  apenas  as  partículas  na 
+mesma  célula  e  os  centros  de  massa  das  oito  células  adjacentes.  A  figura  à  esquerda 
+abaixo ilustra a posição do centro de massa em uma célula. A figura à direita considera 
+o  espaço  dividido  em  apenas  3×3  células,  indica  o  centro  de  massas  nas  células 
+adjacentes e exemplifica as forças que elas causam em uma única partícula.  Em nossa simulação, consideraremos que se duas partículas estiverem a uma distância 
+ε = 0,005, elas colidem e evaporam, portanto ambas deixam de existir e não devem ser 
+consideradas  para  o  restante  da  simulação  (para  simplificar  o  projeto,  ignoramos 
+colisões entre partículas através das células). A simulação geral é uma sequência de intervalos de tempo, e cada intervalo de tempo 
+consiste na seguinte sequência de operações: 1. determinar o centro de massa de cada célula; 2. calcular a força gravitacional aplicada a cada partícula; 3. calcular a nova posição de cada partícula e então a nova velocidade; 4. verificar colisões. Assumimos que os lados se enrolam, ou seja, se uma partícula sai pelo lado do espaço, 
+ela entra na posição correspondente no lado oposto do espaço. Note que isso também 
+se  aplica  à  força  gravitacional,  por  exemplo,  uma  partícula  em  uma  célula  do  topo  é 
+puxada para cima pelo centro de massa da célula correspondente na parte inferior. As condições iniciais, ou seja, massa, posição inicial e velocidade de cada partícula, são 
+definidas por uma rotina init_particles() fornecida no apêndice deste 
+documento. Seu  programa  deve  permitir  exactamente  cinco  parâmetros  de  linha  de  comando 
+nesta ordem: 1. semente para o gerador de números aleatórios 2. tamanho do lado do espaço quadrado da simulação 3. tamanho da grade (número de células em cada lado) 4. número de partículas 5. número de passos de tempo A  semente  é  um  inteiro  de  31  bits  necessário  para  inicializar  o  gerador  de  números 
+aleatórios usado na rotina de inicialização, init_particles(). Observe que 
+usaremos  valores  positivos  e  negativos  aqui,  onde  o  sinal  indica  uma  distribuição  de 
+probabilidade uniforme ou normal, respectivamente. O tamanho do espaço de 
+simulação é um double. Os três valores restantes são todos inteiros positivos (usarão 
+o tamanho da grade ≥ 3). 
+
