@@ -6,7 +6,7 @@ CXXFLAGS = -std=c++11 -O2
 TARGET = parsim
 
 # Arquivos fonte
-SRC = Posicao.cpp Particula.cpp Celula.cpp  Matriz.cpp main.cpp
+SRC = init_particles.cpp Particula.cpp Celula.cpp  Matriz.cpp main.cpp
 
 # Arquivos objeto (compilação dos fontes)
 OBJ = $(SRC:.cpp=.o)

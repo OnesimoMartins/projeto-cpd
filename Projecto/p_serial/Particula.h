@@ -1,23 +1,16 @@
 //
 // Created by Onesimo Martins on 3/20/2025.
 //
-#include "Posicao.h"
-
 #ifndef P_SERIAL_PARTICULA_H
 #define P_SERIAL_PARTICULA_H
 
 
 class Particula {
 private:
-    /* data */
-
 public:
-    float massa;
-    Posicao posicao;
-    float velocidade, forcaGravitacional;
+    double massa, vx, vy, sx, sy, forcaGravitacional;
     void toString();
-//  Particula(/* args */);
-    Particula(Posicao posicao, float massa, float velocidade);
+    Particula(double massa, double vx, double vy, double sx, double sy);
 };
 
 

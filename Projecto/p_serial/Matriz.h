@@ -6,10 +6,11 @@ class Matriz
 {
 private:
     std::vector<Celula> celulas;
-    int espacoQuadrado;
 public:
-    Matriz(int espacoQuadrado);
+    Matriz(long espacoQuadrado);
     void addCelula(Celula celula);
     void checarColisoes();
+    long espacoQuadrado;
+    std::vector<Celula> getCelulas();
 };
 
