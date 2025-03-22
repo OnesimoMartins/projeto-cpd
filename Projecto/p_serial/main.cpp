@@ -73,13 +73,6 @@ using namespace std;
 //     }
 // }
 
-// // Função para executar a simulação
-// void run_simulation(int num_particles, int num_steps, double time_step, double space_size, vector<Particle>& particles) {
-//     for (int step = 0; step < num_steps; step++) {
-//         update_particles(num_particles, particles, time_step);
-//         check_collisions(num_particles, particles);
-//     }
-// }
 
 int main(int argc, char* argv[]) {
     // if (argc != 6) {
@@ -103,12 +96,13 @@ int main(int argc, char* argv[]) {
 
 
     // Executar a simulação
-    double time_step = 0.01;  // Passo de tempo arbitrário
-    // run_simulation(num_particles, num_steps, time_step, space_size, particles);
 
     matriz.calcularCentrosDeMassaCelulas();
     
     matriz.checarColisoes();
+
+    std::cout << "==FINAL== " << std::endl;
+    std::cout << matriz.getNumeroColisoes() << std::endl;
 
     return 0;
 }
