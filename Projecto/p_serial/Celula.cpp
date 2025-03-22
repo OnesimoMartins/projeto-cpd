@@ -3,7 +3,7 @@
 
 Celula::Celula()
 {
-    std::cout << "Celula criada" << std::endl;
+    // std::cout << "Celula criada" << std::endl;
 }
 
 void Celula::adicionarParticula(Particula particula)

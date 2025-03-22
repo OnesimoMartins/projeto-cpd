@@ -2,6 +2,9 @@
 #include <vector>
 #include "Celula.h"
 
+#ifndef MATRIZ_H
+#define MATRIZ_H
+
 class Matriz
 {
 private:
@@ -11,6 +14,7 @@ public:
     void addCelula(Celula celula);
     void checarColisoes();
     long espacoQuadrado;
-    std::vector<Celula> getCelulas();
+    std::vector<Celula>& getCelulas();
 };
 
+#endif 

@@ -2,6 +2,9 @@
 #include <vector>
 #include "Particula.h"
 
+#ifndef CELULA_H
+#define CELULA_H
+
 class Celula
 {
 private:
@@ -14,3 +17,4 @@ public:
     Celula();
 };
 
+#endif // CELULA_H

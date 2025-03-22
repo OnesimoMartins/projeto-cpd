@@ -4,9 +4,9 @@
 #include "Particula.h"
 #include <iostream>
 
-void Particula::toString(){
-    std::cout << " EU SOU UMA PARTICULA " << std::endl;
-}
+// void Particula::toString(){
+//     std::cout << " EU SOU UMA PARTICULA " << std::endl;
+// }
 
 Particula::Particula(double massa, double vx, double vy, double sx, double sy){
     this->massa = massa;
@@ -15,4 +15,15 @@ Particula::Particula(double massa, double vx, double vy, double sx, double sy){
     this->sx = sx;
     this->sy = sy;
     std::cout << " EU SOU INSTANCIA PARTICULA " << std::endl;
+}
+
+void Particula::toString() {
+    // Formatar a saída para exibir 2 casas decimais, por exemplo
+    std::cout << "Particula [massa: " << massa 
+              << ", vx: " << vx
+              << ", vy: " << vy
+              << ", sx: " << sx
+              << ", sy: " << sy
+              << ", forcaGravitacional: " << forcaGravitacional 
+              << "]" << std::endl;
 }

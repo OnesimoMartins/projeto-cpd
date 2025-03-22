@@ -1,6 +1,6 @@
 #include <vector>
-#include "Matriz.h"
 #include "init_particles.h"
+#include "Matriz.h"
 
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -36,7 +36,8 @@ double rnd_normal01()
     return result;
 }
 
-void init_particles(long userseed,long side,long ncside, 
+void init_particles(long userseed,
+    double side,long ncside, 
     long long n_part, Matriz matriz)
 {
     double (*rnd01)() = rnd_uniform01;
@@ -66,9 +67,8 @@ void init_particles(long userseed,long side,long ncside,
         double vy = (rnd01() - 0.5) * side / ncside / 5.0;
         double m = rnd01() * 0.01 * (ncside * ncside) / n_part / G * EPSILON2;
 
-        Particula p(
-            m,vx,vy,sx,sy
-        );
+        Particula p(m,vx,vy,sx,sy);
+        // p.toString();
         matriz.getCelulas()[i % matriz.getCelulas().size()].adicionarParticula(p);
     }
 }
