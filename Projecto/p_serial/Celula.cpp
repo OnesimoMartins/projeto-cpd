@@ -26,6 +26,10 @@ void Celula::adicionarParticula(Particula particula)
     particulas.push_back(particula);
 }
 
+std::vector<Particula>& Celula::getParticulas(){
+    return particulas;
+}
+
 void Celula::calcularCentroMassa()
 {
     double somaMassa = 0;

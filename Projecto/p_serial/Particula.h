@@ -11,6 +11,9 @@ public:
     double massa, vx, vy, sx, sy, forcaGravitacional;
     void toString();
     Particula(double massa, double vx, double vy, double sx, double sy);
+    double distanciaOutraParticula(double x, double y);
+    bool checarColisao(Particula p2);
+    // double checarColisao(Particula p2);
 };
 
 

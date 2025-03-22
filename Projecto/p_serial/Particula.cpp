@@ -3,10 +3,9 @@
 //
 #include "Particula.h"
 #include <iostream>
+#include <cmath>
 
-// void Particula::toString(){
-//     std::cout << " EU SOU UMA PARTICULA " << std::endl;
-// }
+using namespace std;
 
 Particula::Particula(double massa, double vx, double vy, double sx, double sy){
     this->massa = massa;
@@ -14,7 +13,14 @@ Particula::Particula(double massa, double vx, double vy, double sx, double sy){
     this->vy = vy;
     this->sx = sx;
     this->sy = sy;
-    std::cout << " EU SOU INSTANCIA PARTICULA " << std::endl;
+    // std::cout << " EU SOU INSTANCIA PARTICULA " << std::endl;
+}
+double Particula::distanciaOutraParticula(double x, double y){// Calcula a distancia euclidiana desta particula em relação a outra
+    return std::sqrt(std::pow(x - sx, 2) + std::pow(y - sy, 2));
+}
+
+bool Particula::checarColisao(Particula p2){
+   return this->distanciaOutraParticula(p2.sx,p2.sy)<=0.005;
 }
 
 void Particula::toString() {

@@ -4,7 +4,6 @@
 #include <cstdlib>
 #include <ctime>
 #include "Particula.h"
-// #include "Celula.h"
 #include "Matriz.h"
 #include "init_particles.h"
 
@@ -91,7 +90,7 @@ int main(int argc, char* argv[]) {
     // Matr
 
     int seed = 1;//atoi(argv[1]);
-    double espacoQuadrado = 10; //atof(argv[2]);
+    double espacoQuadrado = 2; //atof(argv[2]);
     int espacoCelula = 5;//atoi(argv[3]);
     int num_particles = 90;//atoi(argv[4]);
     int num_steps = atoi(argv[5]);
@@ -107,14 +106,9 @@ int main(int argc, char* argv[]) {
     double time_step = 0.01;  // Passo de tempo arbitrário
     // run_simulation(num_particles, num_steps, time_step, space_size, particles);
 
-    
-    std::cout << "Celulas: " << matriz.getCelulas().size() << std::endl;
-    // Exibir os resultados
-    // Aqui, ajustamos a saída conforme o problema solicita. Exibimos as posições e velocidades das partículas.
-    // for (const auto& p : particles) {
-    //     cout << p.x << " " << p.y << " " << p.velocidade_x << " " << p.velocidade_y << " " << p.massa << endl;
-    // }
-
     matriz.calcularCentrosDeMassaCelulas();
+    
+    matriz.checarColisoes();
+
     return 0;
 }

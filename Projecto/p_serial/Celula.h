@@ -17,6 +17,7 @@ public:
     double getCentroMassa();
     double getCMX();
     double getCMY();
+    std::vector<Particula>& getParticulas();
     void toString();
     Celula();
 };
