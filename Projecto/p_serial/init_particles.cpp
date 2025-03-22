@@ -68,6 +68,7 @@ void init_particles(long userseed,
         double m = rnd01() * 0.01 * (ncside * ncside) / n_part / G * EPSILON2;
 
         Particula p(m,vx,vy,sx,sy);
+        p.id=i+1;
         p.toString();
         matriz.getCelulas()[i % matriz.getCelulas().size()].adicionarParticula(p);
     }

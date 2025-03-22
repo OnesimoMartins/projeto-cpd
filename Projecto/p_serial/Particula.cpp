@@ -4,6 +4,7 @@
 #include "Particula.h"
 #include <iostream>
 #include <cmath>
+#include <cstdint>
 
 using namespace std;
 
@@ -32,4 +33,8 @@ void Particula::toString() {
               << ", sy: " << sy
               << ", forcaGravitacional: " << forcaGravitacional 
               << "]" << std::endl;
+}
+
+bool Particula::operator==(const Particula& other) const{
+    return this->id == other.id;
 }

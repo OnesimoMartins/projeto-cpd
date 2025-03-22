@@ -31,5 +31,16 @@ void Matriz::checarColisoes(){
        listaFinal.insert(listaFinal.end(),celula.getParticulas().begin(),celula.getParticulas().end()); 
      }
      
+     
+    //  auto item_remover = listaFinal.at(2);  // Aqui o item será 3
+
+    //  // Encontrando o item no vetor (usando std::find)
+    //  auto it = std::find(listaFinal.begin(), listaFinal.end(), item_remover);
+ 
+    //  // Verificando se o item foi encontrado
+    //  if (it != listaFinal.end()) {
+    //      listaFinal.erase(it);  // Removendo o item
+    //  }
+ 
      std::cout << "MTODAS PARTICULAS.." << listaFinal.size() << std::endl;
 }
