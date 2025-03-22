@@ -29,6 +29,10 @@ uint64_t Matriz::getNumeroColisoes(){
     return numeroColisoes;
 }
 
+Particula Matriz::getParticula0(){
+    return this->celulas[0].getParticulas()[0];
+}
+
 void Matriz::checarColisoes(){
      std::vector<Particula> listaFinal = {};
 

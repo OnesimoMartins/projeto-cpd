@@ -101,7 +101,9 @@ int main(int argc, char* argv[]) {
     
     matriz.checarColisoes();
 
-    std::cout << "==FINAL== " << std::endl;
+
+    std::cout << "\n" << std::endl;
+    std::cout << matriz.getParticula0().sx <<" " <<  matriz.getParticula0().sy<< std::endl;
     std::cout << matriz.getNumeroColisoes() << std::endl;
 
     return 0;
