@@ -17,5 +17,6 @@ void Matriz::calcularCentrosDeMassaCelulas()
     for (int i = 0; i < celulas.size(); i++)
     {
         celulas[i].calcularCentroMassa();
+        celulas[i].toString();
     }
 }
