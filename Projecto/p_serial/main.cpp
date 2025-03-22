@@ -100,9 +100,8 @@ int main(int argc, char* argv[]) {
 
     init_particles(seed, espacoQuadrado, espacoCelula, num_particles, matriz);
 
-    std::cout << "Celulas: " << matriz.getCelulas().size() << std::endl;
-    
-    // init_particles(num_particles, space_size, particles, seed);
+    std::cout << "Celulas: " << matriz.getCelulas().capacity() << std::endl;
+
 
     // Executar a simulação
     double time_step = 0.01;  // Passo de tempo arbitrário

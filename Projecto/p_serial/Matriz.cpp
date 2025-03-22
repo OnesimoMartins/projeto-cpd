@@ -4,17 +4,7 @@
 
 Matriz::Matriz(long espacoQuadrado)
 {
-    this->espacoQuadrado = espacoQuadrado;
-
-    // for (int i = 0; i < espacoQuadrado; i++)
-    // {
-    //     for (int j = 0; j < espacoQuadrado; j++)
-    //     {
-    //         Celula c;
-    //         celulas.push_back(c);
-    //     }
-    // }   
-    
+    this->espacoQuadrado = espacoQuadrado;    
     std::cout << "Matriz criada" << std::endl;
 }
 

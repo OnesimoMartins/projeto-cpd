@@ -38,7 +38,7 @@ double rnd_normal01()
 
 void init_particles(long userseed,
     double side,long ncside, 
-    long long n_part, Matriz matriz)
+    long long n_part, Matriz& matriz)
 {
     double (*rnd01)() = rnd_uniform01;
     long long i;
@@ -68,7 +68,7 @@ void init_particles(long userseed,
         double m = rnd01() * 0.01 * (ncside * ncside) / n_part / G * EPSILON2;
 
         Particula p(m,vx,vy,sx,sy);
-        // p.toString();
+        p.toString();
         matriz.getCelulas()[i % matriz.getCelulas().size()].adicionarParticula(p);
     }
 }

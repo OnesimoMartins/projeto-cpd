@@ -14,5 +14,5 @@ double rnd_uniform01();
 double rnd_normal01();
 void init_particles(
     long userseed, double side, long ncside, 
-    long long n_part, Matriz matriz);
+    long long n_part, Matriz& matriz);
 #endif
