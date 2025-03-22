@@ -86,7 +86,7 @@ int main(int argc, char* argv[]) {
     double espacoQuadrado = 2; //atof(argv[2]);
     int espacoCelula = 5;//atoi(argv[3]);
     int num_particles = 90;//atoi(argv[4]);
-    int num_steps = atoi(argv[5]);
+    int num_steps = 2;//atoi(argv[5]);
 
     Matriz matriz(espacoQuadrado);
 
@@ -96,11 +96,10 @@ int main(int argc, char* argv[]) {
 
 
     // Executar a simulação
-
-    matriz.calcularCentrosDeMassaCelulas();
-    
-    matriz.checarColisoes();
-
+    for (int i = 1; i <= num_steps; ++i) {
+        matriz.calcularCentrosDeMassaCelulas();
+        matriz.checarColisoes();
+    }
 
     std::cout << "\n" << std::endl;
     std::cout << matriz.getParticula0().sx <<" " <<  matriz.getParticula0().sy<< std::endl;
