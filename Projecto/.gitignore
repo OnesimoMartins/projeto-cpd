@@ -1,0 +1,70 @@
+# Arquivos de compilação
+*.o
+*.a
+*.so
+*.lo
+*.la
+*.out
+*.exe
+*.gch
+*.gcno
+*.gcda
+*.dSYM
+*.class
+
+# Diretórios de compilação
+build/
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# Arquivos de configuração do compilador (exemplo do GCC)
+*.dep
+*.d
+*.rbc
+
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Arquivos de IDEs
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.vscode/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos do CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+makefile
+CMakeLists.txt.user
+
+# Arquivos do Visual Studio (se aplicável)
+.vs/
+.vscode/
+.vsconfig/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos do Xcode (se aplicável)
+xcuserdata/
+*.xcuserstate
+
+# Arquivos de dependências de pacotes
+*.dylib
+*.lib
+*.dll
