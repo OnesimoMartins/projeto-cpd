@@ -12,7 +12,10 @@ std::vector<Celula>& Matriz::getCelulas(){
     return celulas;
 }
 
-// void Matriz::addCelula(Celula celula)
-// {
-//     celulas.push_back(celula);
-// }
+void Matriz::calcularCentrosDeMassaCelulas()
+{
+    for (int i = 0; i < celulas.size(); i++)
+    {
+        celulas[i].calcularCentroMassa();
+    }
+}

@@ -15,6 +15,7 @@ public:
     void checarColisoes();
     long espacoQuadrado;
     std::vector<Celula>& getCelulas();
+    void calcularCentrosDeMassaCelulas();
 };
 
 #endif 

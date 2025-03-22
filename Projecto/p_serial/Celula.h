@@ -9,11 +9,15 @@ class Celula
 {
 private:
     double centroMassa;
+    double cmx, cmy;
     std::vector<Particula> particulas;
 public:
     void calcularCentroMassa();
     void adicionarParticula(Particula p);
     double getCentroMassa();
+    double getCMX();
+    double getCMY();
+    void toString();
     Celula();
 };
 

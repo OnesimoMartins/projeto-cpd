@@ -115,5 +115,6 @@ int main(int argc, char* argv[]) {
     //     cout << p.x << " " << p.y << " " << p.velocidade_x << " " << p.velocidade_y << " " << p.massa << endl;
     // }
 
+    // matriz.calcularCentrosDeMassaCelulas();
     return 0;
 }
